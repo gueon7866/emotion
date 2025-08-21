@@ -1,8 +1,12 @@
-...
+import Editor from '../components/Editor'
+import EmotionItem from '../components/EmotionItem'
+import Header from '../components/Header'
+import Button from '../components/Button'
 import {useContext, useState} from 'react'
 import {DiaryDispatchContext} from '../App'
+import { useNavigate } from 'react-router-dom'
 const New = () => {
-
+  const nav =useNavigate()
   const {onCreate}=useContext(DiaryDispatchContext)
 
   const onSubmit =(input)=>{
@@ -11,6 +15,7 @@ const New = () => {
       input.emotionId,
       input.content
     )
+    nav('/',{replace:true})
   }
 
   return (

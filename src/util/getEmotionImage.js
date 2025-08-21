@@ -11,6 +11,7 @@ export function getEmotionImage(emotionId){
         case 3: return emotion3;
         case 4: return emotion4;
         case 5: return emotion5;
+
         default:return null
     }
 
